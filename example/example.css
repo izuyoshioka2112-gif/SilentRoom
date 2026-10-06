@@ -1,0 +1,130 @@
+:root {
+    color-scheme: dark;
+    --ink: #f7f1ff;
+    --muted: #b9b1c5;
+    --glow: #bf9cff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+    background: radial-gradient(ellipse at 50% 20%, #352343 0, #17131f 45%, #0c0b10 100%);
+}
+
+main {
+    width: min(100%, 560px);
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--glow);
+    letter-spacing: .18em;
+    font-size: .78rem;
+}
+
+h1 {
+    margin: .45rem 0;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+}
+
+.hint {
+    color: var(--muted);
+    margin: .4rem 0 1.8rem;
+}
+
+.stamp-row {
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 24px);
+    margin: 28px 0;
+}
+
+.slot {
+    width: min(27vw, 138px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border: 1px dashed #756c82;
+    border-radius: 18px;
+    background: #17141eaa;
+    overflow: hidden;
+}
+
+.slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    animation: pop .45s ease-out;
+}
+
+.slot.empty::after {
+    content: "？";
+    color: #716a79;
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button,
+.button {
+    color: var(--ink);
+    background: #443153;
+    border: 1px solid #80649b;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #604476;
+}
+
+.message {
+    min-height: 1.5em;
+    color: #eadfff;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--muted);
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.55) rotate(-12deg);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+    }
+}
