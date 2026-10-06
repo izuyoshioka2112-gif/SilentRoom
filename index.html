@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILENT-ROOM</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <main>
+        <div class="subtitle">
+            HAUNTED HOUSE • STAMP RALLY
+        </div>
+        <h1 id="title">お化け屋敷スタンプ帳</h1>
+        <p class="hint" id="hint">３つの文字を集めよう</p>
+        <div class="stamp-row" id="stampRow"></div>
+        <!-- ↓これは見つけた時のメッセージが出る部分 -->
+        <p class="message" id="message" aria-live="polite"></p>
+
+        <!-- ここのボタンはあくまで動作確認 -->
+        <div class="buttons" id="buttons"></div>
+        <!-- ここまで -->
+
+        <a class="back" id="back" href="./">スタンプ帳を見る</a>
+    </main>
+    <script src="./index.js" defer></script>
+    <!-- deferは、htmlの実行が終わる前にjsが実行するとエラーになるため、htmlが実行し終わってから実行するように -->
+</body>
+
+</html>
