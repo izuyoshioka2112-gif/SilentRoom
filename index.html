@@ -14,16 +14,24 @@
             HAUNTED HOUSE • STAMP RALLY
         </div>
         <h1 id="title">お化け屋敷スタンプ帳</h1>
-        <p class="hint" id="hint">３つの文字を集めよう</p>
-        <div class="stamp-row" id="stampRow"></div>
+        <p>３つの文字を集めよう</p>
+        <p class="hint" id="hint"></p>
+        <div class="img">
+            <!-- 枠1：tag=1のときに画像を出したい場所 -->
+            <div id="area-1" class="image-box">1</div>
+
+            <!-- 枠2：tag=2のときに画像を出したい場所 -->
+            <div id="area-2" class="image-box">2</div>
+
+            <!-- 枠3：tag=3のときに画像を出したい場所 -->
+            <div id="area-3" class="image-box">3</div>
+        </div>
         <!-- ↓これは見つけた時のメッセージが出る部分 -->
         <p class="message" id="message" aria-live="polite"></p>
 
         <!-- ここのボタンはあくまで動作確認 -->
         <div class="buttons" id="buttons"></div>
         <!-- ここまで -->
-
-        <a class="back" id="back" href="./">スタンプ帳を見る</a>
     </main>
     <script src="./index.js" defer></script>
     <!-- deferは、htmlの実行が終わる前にjsが実行するとエラーになるため、htmlが実行し終わってから実行するように -->
