@@ -9,13 +9,13 @@
 </head>
 
 <body>
+    <img class="spiderweb" src="./photo/download (1).png" alt="蜘蛛の巣">
     <main>
+        
         <div class="subtitle">
-            HAUNTED HOUSE • STAMP RALLY
+            HAUNTED HOUSE<br>STAMP RALLY
         </div>
-        <h1 id="title">お化け屋敷スタンプ帳</h1>
-        <p>３つの文字を集めよう</p>
-        <p class="hint" id="hint"></p>
+        <h1 class="title" id="title">お化け屋敷</h1>
         <div class="img">
             <!-- 枠1：tag=1のときに画像を出したい場所 -->
             <div id="area-1" class="image-box">1</div>
@@ -26,11 +26,13 @@
             <!-- 枠3：tag=3のときに画像を出したい場所 -->
             <div id="area-3" class="image-box">3</div>
         </div>
+        <p class="goal">３つの文字を集めよう</p>
+        <p class="hint" id="hint"></p>
         <!-- ↓これは見つけた時のメッセージが出る部分 -->
         <p class="message" id="message" aria-live="polite"></p>
 
         <!-- ここのボタンはあくまで動作確認 -->
-        <div class="buttons" id="buttons"></div>
+        <!-- <div class="buttons" id="buttons"></div> -->
         <!-- ここまで -->
     </main>
     <script src="./index.js" defer></script>

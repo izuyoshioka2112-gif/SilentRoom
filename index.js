@@ -6,9 +6,9 @@ const tagNumber = params.get('tag');
 
 // スタンプ情報
 const STAMPS = [
-    { id: "1", letter:"K", image:"./photo/K.jpeg"},
-    { id: "2", letter:"D", image:"./photo/D.jpeg"},
-    { id: "3", letter:"G", image:"./photo/G.jpeg"}
+    { id: "1", letter:"K", image:"./photo/K.png"},
+    { id: "2", letter:"D", image:"./photo/D.png"},
+    { id: "3", letter:"G", image:"./photo/G.png"}
 ];
 
 // 前のデータを引っ張ってくるためのキー

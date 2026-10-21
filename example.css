@@ -1,0 +1,35 @@
+
+.goal {
+    /* 変更：上下の余白を画面の高さに合わせて調整 */
+    margin:
+        clamp(20px, 4svh, 50px)
+        0
+        clamp(32px, 9svh, 110px);
+
+    /* 変更：画面幅に合わせて文字サイズを調整 */
+    font-size: clamp(17px, 4vw, 25px);
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 4vw, 24px);
+}
+
+.image-box {
+    /* 変更：小さい画面では枠も少し小さくする */
+    width: min(24vw, 150px);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff5f;
+    border: 2px solid #010101;
+    border-radius: 50%;
+}
+
+.message {
+    /* 変更：メッセージ前の余白と文字サイズを画面に合わせて調整 */
+    margin-top: clamp(16px, 2.5svh, 30px);
+    font-size: clamp(18px, 5vw, 30px);
+}
