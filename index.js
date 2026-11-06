@@ -8,7 +8,7 @@ const tagNumber = params.get('tag');
 const STAMPS = [
     { id: "1", letter:"K", image:"./photo/K.png"},
     { id: "2", letter:"D", image:"./photo/D.png"},
-    { id: "3", letter:"G", image:"./photo/G.png"}
+    { id: "3", letter:"G", image:"./photo/G.png"},
 ];
 
 // 前のデータを引っ張ってくるためのキー
@@ -47,7 +47,9 @@ function findStamp(id){
 const Stamp = findStamp(tagNumber);
 
 // 
-if(Stamp === null){
+if(tagNumber === "4"){
+    message.textContent = "これは違うよ！他のタグを探してね";
+} else if(Stamp === null){
     message.textContent = "NFCタグを読み込んでね";
 } else if(earnedIds.includes(tagNumber)){//もし、すでに持ってる番号なら
     // メッセージのみ
